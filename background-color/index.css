@@ -1,0 +1,59 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+  border: none;
+  outline:  none;
+}
+
+@keyframes clicked {
+  0% {
+    transform: scale(.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  height: 100vh;
+  transition: .3s ease-in-out;
+}
+
+button {
+  padding: 15px 35px;
+  border-radius: 10px;
+  color: white;
+  display: block;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+button:nth-child(1) {
+  background: linear-gradient(to bottom right, rgb(253, 48, 48), rgb(214, 7, 7), rgb(201, 70, 70));
+  box-shadow: 0px 0px 5px rgb(83, 2, 2);
+}
+
+button:nth-child(2) {
+  background: linear-gradient(to bottom right, rgb(31, 211, 31), rgb(13, 151, 13), rgb(7, 151, 7));
+  box-shadow: 0px 0px 5px rgb(13, 56, 19);
+}
+
+button:nth-child(3) {
+  background: linear-gradient(to bottom right, rgb(51, 51, 248), rgb(28, 28, 209), rgb(23, 23, 236));
+  box-shadow: 0px 0px 5px rgb(0, 0, 41);
+}
+
+.clicked {
+  animation: clicked .5s ease-in-out 1;
+}
+
+@media screen and (max-width: 510px) {
+  body {
+    flex-direction: column;
+  }
+}
