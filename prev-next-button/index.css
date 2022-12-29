@@ -1,0 +1,79 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+  outline: 0px;
+  border: none;
+  box-sizing: border-box;
+}
+
+@keyframes clicked {
+  0% {
+    transform: scale(.9);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+body {
+  background: linear-gradient(to bottom right, rgb(15, 15, 15), black, rgb(8, 8, 8));
+  color: white;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.content-wrapper {
+  padding: 20px;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: rgba(70, 63, 63, 0.089);
+}
+
+img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.308);
+}
+
+button {
+  color: white;
+  padding: 0px 10px;
+  background: linear-gradient(to bottom right, rgb(39, 39, 39), black, rgb(26, 26, 26));
+  box-shadow: 0px 0px 2px rgb(136, 136, 136);
+  cursor: pointer;
+}
+
+button:nth-child(1) {
+  border-radius: 10px 0px 0px 10px;
+}
+
+button:nth-child(3) {
+  border-radius: 0px 10px 10px 0px;
+}
+
+.clicked {
+  animation: clicked .3s ease-in-out 1;
+}
+
+@media screen and (max-width: 510px) {
+  .container {
+    flex-direction: column;
+  }
+  button {
+    padding: 20px;
+  }
+}
